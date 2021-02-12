@@ -73,9 +73,17 @@ console.log(students)
   9.Sem rodar o código respondaqual é a resposta do codigo abaixo e porque? Apos sua resposta, rode o codigo e veja se voce acertou.
 
   console.log(a) - a foi elevado(criado mas não possui tipo - hoisting) sera apresentado undefined
-  var a = 1
+  var a = 1 aqui a vai ser inicializado seria eq a subir o "var a" e em seguida após o 
+            "console.log()" o "a=1"    
 */
 
 console.log(a)
 var a = 1
 console.log(a)
+
+/*
+  10.Sem rodar o código responda qual é a resposta do codigo abaixo e porque? Apos sua resposta, rode o codigo e veja se voce acertou.
+
+  console.log(a) - Vai acontecer um erro de referencia pois olet não sofre elevação  ou hoisting
+  let a = 1     
+*/
