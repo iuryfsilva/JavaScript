@@ -1,81 +1,76 @@
-//1.Declare uma variável de nome weight
-let weight
+/* 
+  Expressoões e Operadores
 
-//2.Que tipo de dado é a variavelacima?
-console.log(typeof weight)//vai retornar undefined pouis ainda não foi inicializada
-
-/*
-  3.Declare uma variável e atribua valores para cada um dos dados:
-    -name: String
-    -age: Number(integer)
-    -stars: Number(float)
-    -isSubscribed: Boolean
+  - Expressions -Buscar sempre usar o ";"
+  - Operators
+    -unary
+    -binary
+    -ternary
+    
 */
 
-let name = 'Iury', age = 26, stars= 5.8, isSubscribed = true
+let number = 1;
 
-/*
-  4.A variável student abaixo é de um tipo de dado?
+(function(){
+  console.log("Função auto execultável")
+})();
 
-  4.1 Atribua a ela as mesmas proprieddes e valores do exercicio 3.
+//Operador binario
+console.log(number + 1);
 
-  4.2 Mostre no console a seguinte mensagem:
-        <name>de idade <age> pesa <weight>kg.
+//Operador ternario
+console.log(100 % 2 == 0 ? "Par": "Ímpar");
 
+//Operador unario
+console.log(++number);
+
+/* 
+  new
+    -Left-hand-side expression
+    -criar um novo objeto
 */
 
-let student = {};//Essa variável é do tipo object
-console.log(typeof student)
-student = {
-    name: 'Iury',
-    age: 26,
-    weight: 74.9,
-    isSubscribed: true
-}
-
-console.log(`${student.name} de idade ${student.age} pesa ${student.weight} kg.`)
+let name = new String("Iury");
+let age = new Number(26);
+console.log( name, age);
+name.surName = "Silva";//cria um novo atributo no obj name
+console.log( name,name.surName, age);
 
 
-/*
-  5. Declare uma variável do tipo Array, de nome students e atribua a ela nenhum valor, ou seja , somente Array vazio
-*/
+let data = new Date('2021-02-16');
+console.log(data);
 
-let students = []
+//Operador delete
+const person = {
+  name: 'Iury',
+  age: 36
+};
 
-/*
-  6. Reatribua valor para a variavel acima, colocando dentro dela o objeto student da questão 4. (não copiar e colar o obj, mas usar o obj criato e inserir ele no Array)
-*/
-students = [
-    student
-]
-console.log(students)
+console.log(person);
 
-/*
-  7.Coloque  no console o valor da posição zero do arry acima
-*/
+delete person.age;//deleta somente o atributo que está informado
 
-console.log(students[0])
+console.log(person);
 
-/*
-  8.Crie um novo student e coloque na posição 1 do Array students
-*/
-const jao = {
-    name:"Jao",
-    age: 20,
-    weight: 55.7,
-    isSubscribed: false
-}
-students[1] = jao
+//Operador de String 
 
-console.log(students)
+//comparison(comparação)
+console.log('a' == 'a');
 
-/*
-  9.Sem rodar o código respondaqual é a resposta do codigo abaixo e porque? Apos sua resposta, rode o codigo e veja se voce acertou.
+//concatenation (concatenação)
+//Retorna a união de duas Strings
+console.log('a' + "b");
 
-  console.log(a) - a foi elevado(criado mas não possui tipo - hoisting) sera apresentado undefined
-  var a = 1
-*/
+let alpha = 'alpha';
+alpha += 'bet';
+//alpha *= 's' NÃO FUNCIONA GERA UM NaN
 
-console.log(a)
-var a = 1
-console.log(a)
+console.log(alpha);
+
+console.log(alpha + 321);
+
+
+//Teste truthy
+
+console.log(Infinity ? "Verdadeiro": "Falso");
+console.log();

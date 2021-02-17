@@ -1,11 +1,8 @@
-//Manipulando Arrays
+/* Manipulando Arrays
 
-// Verificar se o texto contém a palavra AMOR
 
-let phrase = "I want to live a love"
-console.log(phrase.includes("love"))//O includes é case sensitive
-
-//Separe um teto que contém espaços em um novo array onde cada teto é uma posiçãp do array. Depois disso, transforme o array em um texto  e onde eramespaços, coloque _
+Separe um texto que contém espaços em um novo array onde cada teto é uma posiçãp do array. Depois disso, transforme o array em um texto  e onde eramespaços, coloque _
+*/
 
 let myArray = phrase.split(" ")//O split separa a string pelovalor informado  entre aspas
 console.log(myArray)
@@ -37,10 +34,10 @@ console.log(elementosArray[2]())//Aqui nessa linha é selecionada a pposição 2
 
 console.log(elementosArray.length)//aqui conta  quantos elementos tem no array
 
-console.log(elementosArray)//aqui exibe o arry no console
+console.log(elementosArray)//aqui exibe o array no console
 
 
-//Transformar uma cadeia de caractyeres em elementos de um array
+//Transformar uma cadeia de caracteres em elementos de um array
 
 word = 'manipulação'
 console.log(Array.from(word))//converte uma string em elementos de um array
@@ -52,7 +49,7 @@ let techs = ["html", "CSS", "Js"]
 
 //adicionar um item no fim 
 console.log(techs)
-techs.push("nodejs")//adiciou o elemento "nodejs" no final do array
+techs.push("nodejs")//adicionou o elemento "nodejs" no final do array
 
 //add no começo
 console.log(techs)

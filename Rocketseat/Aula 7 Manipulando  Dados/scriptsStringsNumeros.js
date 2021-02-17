@@ -26,4 +26,8 @@ word = "Programar é muito bacana!"
 console.log(word.toUpperCase())
 console.log(word.toLowerCase())
 
+// Verificar se o texto contém a palavra AMOR
+
+let phrase = "I want to live a love"
+console.log(phrase.includes("love"))//O includes é case sensitive
 
