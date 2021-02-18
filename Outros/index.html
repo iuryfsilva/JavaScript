@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Usando Eventos no JavaScript</title>
+    <script>
+      //this para referencia de objetos
+      function validate(obj, lowVal, hiVal) {
+        if (obj.value < lowVal || obj.value > hiVal) alert("Valor inválido!");
+      }
+    </script>
+  </head>
+
+  <body>
+    Insira seu Nome:
+    <input type="text" name="age" size="3" onchange="validade(this, 18, 99)" />
+    <p>
+      Ao clicarmos fora do input text o texto escrito nele ficará todo em caixa
+      alta.
+    </p>
+  </body>
+</html>
