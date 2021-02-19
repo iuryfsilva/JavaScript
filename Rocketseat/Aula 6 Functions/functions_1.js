@@ -58,28 +58,28 @@ function sayMyName(){
 
 //Arrow function
 
-const sayMyName = () =>{
+const digaMyName = () =>{
   console.log('Iury')
 }
 
-sayMyName()
+digaMyName()
 
 
 //Arrow function with parameters
 
-const sayMyName = (name) =>{
+const saymyName = (name) =>{
   console.log(name)
 }
 
-sayMyName('Iury')
+saymyName('Iury')
 
 
 //Callback function - função recursiva
 
-function sayMyName(name){
+function sayMyname(name){
   name()
 }
-sayMyName(  
+sayMyname(  
   () => {
     console.log('Estou em uma callback')
   }

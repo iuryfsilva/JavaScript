@@ -101,11 +101,10 @@ console.log(listarTodasAsPropriedades(object1));
 
 //Criação de um objeto usando um inicializador de objeto
 var obj = {
-  propriedade_1: "Valor qualquer",  //propriedade_# pode ser um identificador
-  2: "Valor qualquer",              // ou um número
-  "propriedade n": "Valor qualquer",// ou uma string
+  propriedade_1: "Valor qualquer", //propriedade_# pode ser um identificador
+  2: "Valor qualquer", // ou um número
+  "propriedade n": "Valor qualquer", // ou uma string
 };
-
 
 //Criando novo objeto usando uma função contrutora
 function Carro(marca, modelo, ano) {
@@ -146,11 +145,10 @@ console.log(novoCarro.dono);
 novoCarro2.cor = "Azul-Marinho";
 outroCarro.cor = "Preto";
 
-
 console.log(outroCarro);
 console.log(novoCarro2);
 /* #####OBS: A definição acima só funciona para objetos já instanciados, para adicionar uma nova proipriedade à todos os objetos de um tipo isso deve ser feito na definição do objeto na própria função construtora
-*/
+ */
 
 //Definindo Propriedades para um tipo de objeto usando prototype
 Carro.prototype.cor = null;
@@ -164,11 +162,12 @@ console.log(iury);
 //Criando objeto com o Object.create()
 //Encapsulamento das propriedades e métodos de Animal
 let Animal = {
-  tipo: "Invertebrados",//Propriedades de valores padrão
-  qualTipo: function () {     //Método que irá mostrar o tipode Animal
+  tipo: "Invertebrados", //Propriedades de valores padrão
+  qualTipo: function () {
+    //Método que irá mostrar o tipode Animal
     console.log(this.tipo); //Não funciona () => {} nesse caso retorna undefined
-  }
-}
+  },
+};
 
 //Cria um novo tipo de animal chamado animal1
 var animal1 = Object.create(Animal);
@@ -178,15 +177,14 @@ console.log(animal1);
 //cria um novo tipo de animal chamado Peixes
 let peixe = Object.create(Animal);
 peixe.tipo = "Peixes";
-peixe.qualTipo();//aqui chama a função dentro do objeto
+peixe.qualTipo(); //aqui chama a função dentro do objeto
 
-
-//Métodos de um objeto 
+//Métodos de um objeto
 var otherObject = {
   myMethod: () => {
     console.log("Do something!");
-  }
-}
+  },
+};
 
 otherObject.myMethod();
 
@@ -198,22 +196,26 @@ var obj_o = {
   },
   set c(x) {
     this.a = x / 2;
-  }
+  },
 };
 
-console.log(obj_o.a);//2
-console.log(obj_o.b);//3
+console.log(obj_o.a); //2
+console.log(obj_o.b); //3
 obj_o.c = 50;
-console.log(obj_o.a);//25
+console.log(obj_o.a); //25
 //Os getters e setters são propriedades do objeto que alteram seus valores
 
 //O código a seguir ilustra  como getters e setters podem extender o protótipo Date para add a propriedade ano para todas as instâncias de classes Date pré definidas
 
 var d = Date.prototype;
 Object.defineProperty(d, "year", {
-  get: function(){ return this.getFullYear() },
-  set:  function(y){ this.setFullYear(y) }
-}); 
+  get: function () {
+    return this.getFullYear();
+  },
+  set: function (y) {
+    this.setFullYear(y);
+  },
+});
 
 var now = new Date();
 console.log(now.year);
@@ -222,18 +224,57 @@ console.log(now);
 
 //Definição getter e seter usando objetos inicializadores
 var ob_ject = {
-  a:7,
-  get b(){return this.a + 1;},
-  set c(x){this.a = x / 2;}
-}
+  a: 7,
+  get b() {
+    return this.a + 1;
+  },
+  set c(x) {
+    this.a = x / 2;
+  },
+};
 
 //Definição getter e setter usando o metodo Object.defineProperties()
 Object.defineProperties(ob_ject, {
-  'e':{get:function(){return this.a+45;}},
-  'f':{set:function(x){this.a = x/4; }}
+  e: {
+    get: function () {
+      return this.a + 45;
+    },
+  },
+  f: {
+    set: function (x) {
+      this.a = x / 4;
+    },
+  },
 });
 
 //Nessas linhas foram add metodos a um objeto ja definido
 ob_ject.f = 50;
 console.log(ob_ject.b);
 console.log(ob_ject);
+
+//Removendo propriedades de um objeto
+var myObject = new Object();
+myObject.a = 5;
+myObject.b = 12;
+console.log(myObject);
+
+delete myObject.b;
+console.log(myObject);
+//busca "b" no objeto
+console.log("b" in myObject);
+
+//Comparando Objetos
+
+//Duas variáveis, dois objetos distintos cm as mesmas propriedades
+var fruit = {name: "apple"};
+var fruitBear = {name: "apple"};
+
+fruit == fruitBear //retorna false
+fruit === fruitBear //retorna false
+
+//Duas variaveis em unico objeto
+var fruit = {name: "apple"};
+var fruitBear = fruit;//fruitBear faz referencia ao objeto fruit
+//no caso acima ambas apontam para o mesmo objeto.
+
+
