@@ -16,13 +16,21 @@
 </head>
 <body>
     <h1>Iniciando estudos com <strong>DOM</strong></h1>
-    <p>Aqui vai o resultado</p>
-    <div>Clique em mim</div>
+    <p>Aqui vai o resultado </p>
+    <p>Aprendendo a usar o <strong>DOM</strong>> em JavaScript</p>
+    <div id="msg">Teste oi oi oi opi</div>
     <script>
+        //Maneiras de selecionar elementos em js
         var p1 = window.document.getElementsByTagName('p')[0];
-        window.document.write(p1.innerText);
-        window.document.write(window.document.URL);
+        let corpo = window.document.body;
+        //let d = window.document.getElementById("msg");//seleciona a div pelo id
+        //window.document.write(p1.innerHTML);''
+        //window.document.write(window.document.charset);
         //window.document.write(window.navigator.appName);
+        //let p1 = window.document.getElementsByTagName('p'[1]);
+        //d.style.background = 'green';
+        //d.innerText = "Estou aguardando..."
+        //let d = window.document.querySelector('div#msg'); 
     </script>
 </body>
 </html>

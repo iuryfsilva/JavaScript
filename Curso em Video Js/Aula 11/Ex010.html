@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detran</title>
+    <style>
+      body {
+        background-color: blueviolet;
+        font: normal 18pt Arial;
+        color: white;
+      }
+      input {
+        font: normal 18pt Arial;
+        width: 100px;
+      }
+      div#result {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Sistema de Multas</h1>
+    Velocidade do veículo:
+    <input type="number" name="txtVelocidade" id="txtVelocidade" /> Km/h
+    <input type="button" value="verificar" onclick="calcular()" />
+    <div id="result"></div>
+    <script>
+      function calcular() {
+        let txtvelocidade = window.document.getElementById("txtVelocidade");
+        let resultado = window.document.getElementById("result");
+        let velocidade = Number(txtvelocidade.value);
+        resultado.innerHTML = `Sua velocidade atual é de <strong>${velocidade} Km/h</strong>`;
+        if (velocidade > 60) {
+          resultado.innerHTML = `<strong>Infração Registrada</strong> - Trafegando acima do limite permitido.`;
+        }
+        resultado.innerHTML += `<p>Dirija sempre com o segurança!</p>`;
+      }
+    </script>
+  </body>
+</html>
