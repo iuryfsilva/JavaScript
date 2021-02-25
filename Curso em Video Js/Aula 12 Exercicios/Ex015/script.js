@@ -21,21 +21,37 @@ function verificar() {
             verificarIdade(genero, idade);
         } else if (formlarioSexo[0].cheked) {
             genero = 'Mulher';
+            verificarIdade(genero, idade);
         }
         //Centraliza o texto de result via js
         result.style.textAlign = "center";
         result.innerHTML = `Detectamos ${genero} com ${idade} anos.`
     }
 }
-function verificaIdade(genero, idade){
-    if (idade >= 0 && idade < 2) {
+function verificaIdade(genero, idade) {
+    if (idade >= 0 && idade < 4) {
         //baby
-    } else if (idade >= 2 && idade <18) {
+        
+    } else if (idade >= 4 && idade < 18) {
         //boy or girl
-        if (genero.toUpperCase === '') {
+        if (genero.toUpperCase == "HOMEM") {
             //boy
         } else {
             //girl
         }
-    } 
+    } else if (idade >= 18 && idade < 70) {
+        //man or woman
+        if (genero.toUpperCase == "HOMEM") {
+            //man
+        } else {
+            //woman
+        }
+    } else if (idade >= 70 && idade < 100) {
+        //oldman or oldwoman
+        if (genero.toUpperCase == "HOMEM") {
+            //oldman
+        } else {
+            //oldwoman
+        }
+    }
 }
