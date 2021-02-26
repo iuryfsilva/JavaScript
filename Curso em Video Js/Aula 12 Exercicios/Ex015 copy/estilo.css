@@ -22,11 +22,6 @@ div{
     padding: 8px;
 } 
 
-img{/* cuida da apresnetação da imagem alinhamente  no caso na pratica não é reconmendável fazer esse tipo de tratamento de img via css por a hospedagem em um servidor custraruia mais caro */
-    align-items: center;
-    padding: 10px;
-}
-
 footer{
     color:white;
     text-align: center;
