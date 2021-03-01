@@ -1,0 +1,24 @@
+body{
+    background: rgba(73, 66, 168, 0.836);
+    font: normal 15pt Arial;
+}
+
+header{
+    color: white;
+    text-align: center;
+}
+
+section{
+    background: white;/* define a cor do background da section */
+    border-radius: 10px;/*Faz a borda ficar arrendondada com raio 10px*/
+    padding: 15px;/* cria um espaço tipo margem dentro da section */
+    width: auto;/* Define o tamanho na horizontal da section */
+    margin: auto;/* Define as margens do body(Onde a section termina e começa) */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.781);
+}
+
+footer{
+    color:white;
+    text-align: center;
+    font-style: italic;
+}
