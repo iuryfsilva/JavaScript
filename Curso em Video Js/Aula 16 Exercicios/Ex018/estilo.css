@@ -12,9 +12,15 @@ section{
     background: white;/* define a cor do background da section */
     border-radius: 10px;/*Faz a borda ficar arrendondada com raio 10px*/
     padding: 15px;/* cria um espaço tipo margem dentro da section */
-    width: auto;/* Define o tamanho na horizontal da section */
+    width: 500px;/* Define o tamanho na horizontal da section */
     margin: auto;/* Define as margens do body(Onde a section termina e começa) */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.781);
+}
+
+/* Ajustes de estilo referentes ao select */
+select#slctValoresArray{
+    width: 180px;
+    align-items: center;
 }
 
 footer{

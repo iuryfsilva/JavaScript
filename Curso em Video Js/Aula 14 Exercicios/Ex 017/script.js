@@ -43,6 +43,8 @@ function tubuadaSoma(valorNumero, tabuada) {
 //Calcula tabuada subtracao
 function tubuadaSubtracao(valorNumero, tabuada) {
     for (let controle = 1; controle <= 10; controle++) {
+        
+        //cria um novo elemento a ser add na select posteriormente
         let item = document.createElement('option');
         item.text = `${valorNumero} - ${controle} = ${valorNumero - controle}`;
         
